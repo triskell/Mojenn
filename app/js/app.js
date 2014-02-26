@@ -2,15 +2,17 @@
 
 
 // Declare app level module which depends on filters, and services
-angular.module('myApp', [
+angular.module('mojenn', [
   'ngRoute',
-  'myApp.filters',
-  'myApp.services',
-  'myApp.directives',
-  'myApp.controllers'
+  'mojenn.filters',
+  'mojenn.services',
+  'mojenn.directives',
+  'mojenn.controllers'
 ]).
 config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/view1', {templateUrl: 'partials/partial1.html', controller: 'MyCtrl1'});
-  $routeProvider.when('/view2', {templateUrl: 'partials/partial2.html', controller: 'MyCtrl2'});
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});
+  $routeProvider.when('/page/:pageId', {templateUrl: 'partials/page.html', controller: 'pageCtrl'});
+  $routeProvider.when('/blog/', {templateUrl: 'partials/blog.html', controller: 'blogCtrl'});
+  $routeProvider.when('/post/:postId', {templateUrl: 'partials/post.html', controller: 'postCtrl'});
+  $routeProvider.otherwise({redirectTo: '/'});
 }]);
