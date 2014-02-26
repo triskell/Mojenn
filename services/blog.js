@@ -15,7 +15,7 @@ function Blog() {
 	this.blog = [{
 		id: '0',
 		name: 'Test Post',
-		content: 'Helloworld from blog !'
+		content: '###Hello !  \nHelloworld from blog !'
 	},
 	{
 		id: '1',

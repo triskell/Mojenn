@@ -2,6 +2,7 @@
 <ul>
 	<li ng-repeat="post in blog">
 		<h2><a href="#/blog/{{post.id}}">{{post.name}}</a></h2>
-		<p>{{post.content}}</p>
+		
+	<div ng-bind-html="post.content | markdown"></div>
 	</li>
 <ul>

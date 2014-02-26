@@ -16,9 +16,10 @@ angular.module('mojenn.controllers', []).
 	.controller('homeCtrl', ['$scope', function($scope) {
 		
 	}])
-	.controller('pageCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+	.controller('pageCtrl', ['$scope', '$routeParams', '$http', 'markdown', function($scope, $routeParams, $http, markdown) {
 		$http.get('/pages/' + $routeParams.pageId).success(function(data) {
 			$scope.page = data;
+			//$scope.page.content = markdown.convert(data.content);
 		});
 	}])
 	.controller('blogCtrl', ['$scope', '$http', function($scope, $http) {

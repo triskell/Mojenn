@@ -15,7 +15,7 @@ function PageStore() {
 	this.pages = [{
 		id: '0',
 		name: 'Test Page',
-		content: 'Helloworld !'
+		content: '###Helloworld !  \n## hi  \n# yo'
 	},
 	{
 		id: '1',
