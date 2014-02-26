@@ -1,0 +1,14 @@
+{
+  "name": "Mojenn",
+  "description": "A CMS using AngularJS and NodeJS",
+  "repository": "https://github.com/triskell/Mojenn",
+  "devDependencies": {
+    "phantomjs" : "~1.9",
+    "karma" : "~0.10",
+    "karma-junit-reporter" : "~0.1",
+    "karma-jasmine" : "~0.1",
+    "protractor" : "~0.17.0", 
+    "feathers" : "~0.3.1",
+    "passport" : "~0.2.0"
+  }
+}
