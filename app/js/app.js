@@ -13,6 +13,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});
   $routeProvider.when('/page/:pageId', {templateUrl: 'partials/page.html', controller: 'pageCtrl'});
   $routeProvider.when('/blog/', {templateUrl: 'partials/blog.html', controller: 'blogCtrl'});
-  $routeProvider.when('/post/:postId', {templateUrl: 'partials/post.html', controller: 'postCtrl'});
+  $routeProvider.when('/blog/:postId', {templateUrl: 'partials/post.html', controller: 'postCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);

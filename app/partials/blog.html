@@ -1,1 +1,7 @@
-Here is blog
+<h1>Blog</h1>
+<ul>
+	<li ng-repeat="post in blog">
+		<h2><a href="#/blog/{{post.id}}">{{post.name}}</a></h2>
+		<p>{{post.content}}</p>
+	</li>
+<ul>

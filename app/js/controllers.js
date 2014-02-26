@@ -21,9 +21,13 @@ angular.module('mojenn.controllers', []).
 			$scope.page = data;
 		});
 	}])
-	.controller('blogCtrl', ['$scope', function($scope) {
-		
+	.controller('blogCtrl', ['$scope', '$http', function($scope, $http) {
+		$http.get('/blog').success(function(data) {
+			$scope.blog = data;
+		});
 	}])
-	.controller('postCtrl', ['$scope', function($scope) {
-		
-	}])
+	.controller('postCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+		$http.get('/blog/' + $routeParams.postId).success(function(data) {
+			$scope.post = data;
+		});
+	}]);
