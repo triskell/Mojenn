@@ -3,9 +3,11 @@
 /* Controllers */
 
 angular.module('mojenn.controllers', []).
-	controller('MainCtrl', ['$scope', function($scope) {
-		$scope.website = {
-			name : "<< Name Here >>"
+	controller('MainCtrl', ['$scope', '$rootScope', function($scope, $rootScope) {
+		$rootScope.app = {
+			name : 'Trysk.net',
+			version : 'alpha.1',
+			author : 'Thomas \'Trysk\' Abot'
 		}
 	}])
 	.controller('navCtrl', ['$scope', '$http', function($scope, $http) {

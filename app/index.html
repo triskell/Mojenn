@@ -2,7 +2,7 @@
 <html lang="en" ng-app="mojenn">
 <head>
   <meta charset="utf-8">
-  <title ng-controller="MainCtrl">{{website.name}}</title>
+  <title ng-controller="MainCtrl">{{app.name}}</title>
   <link rel="stylesheet" href="lib/bootstrap/bootstrap.min.css"/>
   <link rel="stylesheet" href="css/app.css"/>
 </head>
@@ -11,7 +11,7 @@
 <!-- NAVBAR -->
   <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation" ng-controller="MainCtrl">
     <div class="container">
-      <a class="navbar-brand" href="#">{{website.name}}</a>
+      <a class="navbar-brand" href="#">{{app.name}}</a>
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav" ng-controller="navCtrl">
           <li><a href="#/blog">Blog</a></li>
@@ -25,7 +25,7 @@
   <div id="wrapper" class="container" ng-view></div>
 
 <!-- VERSION -->
-  <div>Mojenn version <span app-version></span></div>
+  <div>Made by {{app.author}}, with Mojenn version {{app.version}}</div>
 
 <!-- SCRIPTS -->
   <script src="lib/angular/angular.js"></script>
