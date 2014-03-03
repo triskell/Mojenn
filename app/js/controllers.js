@@ -33,4 +33,15 @@ angular.module('mojenn.controllers', []).
 		$http.get('/blog/' + $routeParams.postId).success(function(data) {
 			$scope.post = data;
 		});
+	}])
+	.controller('adminCtrl', ['$scope', '$routeParams', '$http', function($scope, $routeParams, $http) {
+		$http.get('/admin').success(function(data, status, headers, config) {
+	      $scope.admin = data;
+	    }).
+	    error(function(data, status, headers, config) {
+	      	console.log("-> Error : " + status);
+			$scope.admin = {
+				test : "ERROR : " + status
+			};
+	    });
 	}]);

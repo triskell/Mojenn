@@ -9,6 +9,9 @@
     "karma-jasmine" : "~0.1",
     "protractor" : "~0.17.0", 
     "feathers" : "~0.3.1",
-    "passport" : "~0.2.0"
+    "passport" : "~0.2.0",
+    "passport-twitter" : "~1.0.2",
+    "mongoose" : "3.8.8",
+    "bcrypt-nodejs" : "~0.0.3"
   }
 }

@@ -14,5 +14,6 @@ config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/page/:pageId', {templateUrl: 'partials/page.html', controller: 'pageCtrl'});
   $routeProvider.when('/blog/', {templateUrl: 'partials/blog.html', controller: 'blogCtrl'});
   $routeProvider.when('/blog/:postId', {templateUrl: 'partials/post.html', controller: 'postCtrl'});
+  $routeProvider.when('/admin', {templateUrl: 'partials/admin.html', controller: 'adminCtrl'});
   $routeProvider.otherwise({redirectTo: '/'});
 }]);
