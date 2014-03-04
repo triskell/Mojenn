@@ -1,1 +1,24 @@
-So, we have : {{admin.test}}
+<div class="container-fluid">
+	<div class="row-fluid">
+		<div class="col-xs-2" >
+			Posts and pages list
+		</div>
+
+		<div class="col-xs-10 row">
+			<div class="col-md-6" ng-model="ace_editor" ui-ace="{
+				useWrapMode : true,
+				showGutter: true,
+				mode: '/lib/ace/mode-markdown',
+				onLoad: aceChanged,
+				onChange: aceChanged
+				}" >
+			Ace here
+			</div>	
+
+			<div class="col-md-6" ng-bind-html="ace_editor | markdown">
+			</div>
+		</div>
+
+	</div>
+</div>
+

@@ -7,7 +7,8 @@ angular.module('mojenn', [
   'mojenn.filters',
   'mojenn.services',
   'mojenn.directives',
-  'mojenn.controllers'
+  'mojenn.controllers',
+  'ui.ace'
 ]).
 config(['$routeProvider', function($routeProvider) {
   $routeProvider.when('/', {templateUrl: 'partials/home.html', controller: 'homeCtrl'});

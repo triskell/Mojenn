@@ -1,8 +1,10 @@
-<h1>Blog</h1>
-<ul>
-	<li ng-repeat="post in blog">
-		<h2><a href="#/blog/{{post.id}}">{{post.name}}</a></h2>
-		
-	<div ng-bind-html="post.content | markdown"></div>
-	</li>
-<ul>
+<div class="container">
+	<h1>Blog</h1>
+	<ul>
+		<li ng-repeat="post in blog">
+			<h2><a href="#/blog/{{post.id}}">{{post.name}}</a></h2>
+			
+		<div ng-bind-html="post.content | markdown"></div>
+		</li>
+	</ul>
+</div>
