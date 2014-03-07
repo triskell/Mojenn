@@ -40,7 +40,7 @@ Content.prototype.create = function(data, params, callback) {
 
 	newContent.save(function(err) {
 		if (err) { throw err; }
-  		console.log('Commentaire ajouté avec succès !');
+  		console.log('Content added !');
   		callback(null, newContent);
 	});
 }
