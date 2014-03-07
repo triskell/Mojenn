@@ -16,7 +16,10 @@
         <ul class="nav navbar-nav" ng-controller="navCtrl">
           <li><a href="#/blog">Blog</a></li>
           <li ng-repeat="page in pages"><a href="#/page/{{page._id}}">{{page.title}}</a></li>
-          <li><a href="/auth/twitter"> Login with Twitter</a></li>
+        </ul>
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#/admin">Admin</a>
+          <li><a href="/auth/twitter">Login with Twitter</a></li>
         </ul>
      </div>
     </div>
@@ -26,7 +29,7 @@
   <div id="wrapper" ng-view></div>
 
 <!-- VERSION -->
-  <div>Made by {{app.author}}, with Mojenn version {{app.version}}</div>
+  <div>Made by {{app.author}}, with Mojenn version {{app.version}}. UNSAFE, DO NOT USE FOR PRODUCTION.</div>
 
 <!-- SCRIPTS -->
   <script src="lib/angular/angular.js"></script>
