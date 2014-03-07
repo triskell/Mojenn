@@ -9,16 +9,8 @@ module.exports = function(app, passport) {
 	// Routes
 	app	.use('/pages', new PageService())
 		.use('/blog', new BlogService())
-		.use(function(req,res,next){
-			if(req.isAuthenticated()){
-				next();
-			} else {
-				res.send(401, 'Not Authorized');
-			}
-		})
-		//Everything below need authetification
-		.use('/admin', new AdminService())
-		.use('/content', new ContentService());
+		.use('/admin', isAuthenticated, new AdminService())
+		.use('/content', isAuthenticated, new ContentService());
 
 
 	// Twitter authentification path
@@ -29,4 +21,12 @@ module.exports = function(app, passport) {
 		    failureRedirect: '/login' 
 		  }))
 		};
+
+function isAuthenticated(req,res,next){
+	if(req.isAuthenticated()){
+		next();
+	} else {
+		next(new Error(401));
+	}
+}
 		
