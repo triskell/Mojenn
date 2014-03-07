@@ -14,8 +14,7 @@ function escapeHtml(str) {
 function Admin() {
 	this.admin ={
 		test : "IN ADMIN"
-	};
-	this.lastId = 2;
+	}
 }
  
  

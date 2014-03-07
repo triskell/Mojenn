@@ -5,7 +5,9 @@ var feathers = require('feathers'),
 var config = require('./config'); //Server configuration file
 
  
-mongoose.connect(config.dbUrl);  
+mongoose.connect(config.dbUrl, function(err){
+	if (err) { throw err; }
+});  
 
 require('./passport')(passport); //Set authentification
 

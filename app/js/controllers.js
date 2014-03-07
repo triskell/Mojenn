@@ -44,4 +44,26 @@ angular.module('mojenn.controllers', []).
 				test : "ERROR : " + status
 			};
 	    });
+
+	    $scope.publishPost = function(){
+	    	$scope.publish('post');
+	    }
+
+	    $scope.publishPage = function(){
+	    	$scope.publish('page');
+	    }
+
+	    $scope.publish = function(type){
+	    	$http.post('/content', 
+	    		{
+	    			type: type,
+	    			title: $scope.editor_title,
+	    			body: $scope.editor_body
+	    		}
+	    	).success(function(data) {
+				console.log = data;
+			}).error(function(data) {
+				console.log = data;
+			});
+	    }
 	}]);

@@ -3,7 +3,8 @@ module.exports = function(app, passport) {
 	// Services
 	var PageService = require('./services/pages'),
 		BlogService = require('./services/blog'),
-		AdminService = require('./services/admin');
+		AdminService = require('./services/admin'),
+		ContentService = require('./services/content');
 
 	// Routes
 	app	.use('/pages', new PageService())
@@ -16,7 +17,8 @@ module.exports = function(app, passport) {
 			}
 		})
 		//Everything below need authetification
-		.use('/admin', new AdminService());
+		.use('/admin', new AdminService())
+		.use('/content', new ContentService());
 
 
 	// Twitter authentification path

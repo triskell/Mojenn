@@ -1,24 +1,28 @@
 <div class="container-fluid">
 	<div class="row-fluid">
-		<div class="col-xs-2" >
-			Posts and pages list
-		</div>
-
-		<div class="col-xs-10 row">
-			<div class="col-md-6" ng-model="ace_editor" ui-ace="{
+		<div class="input-group">
+	      <input type="text" class="form-control" placeholder="Place here the title" ng-model="editor_title">
+	      <div class="input-group-btn">
+	        <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown">Publish as ... <span class="caret"></span></button>
+	        <ul class="dropdown-menu pull-right">
+	          <li><a href="" ng-click="publishPost()">Post</a></li>
+	          <li><a href="" ng-click="publishPage()">Page</a></li>
+	        </ul>
+	    </div>
+	</div>
+	<div class="row-fluid">
+			<div class="col-md-6" ng-model="editor_body" ui-ace="{
 				useWrapMode : true,
 				showGutter: true,
 				mode: '/lib/ace/mode-markdown',
 				onLoad: aceChanged,
 				onChange: aceChanged
 				}" >
-			Ace here
 			</div>	
 
-			<div class="col-md-6" ng-bind-html="ace_editor | markdown">
+			<div class="col-md-6" ng-bind-html="editor_body | markdown">
 			</div>
 		</div>
-
 	</div>
 </div>
 
