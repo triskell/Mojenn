@@ -4,7 +4,7 @@ var contentSchema = new mongoose.Schema({
 
     id      : mongoose.Schema.ObjectId,
     type	: String,
-    date 	: { type : Date, default : Date.now },
+    date    : { type : Date, default : Date.now },
     title   : String,
     body	: String
 
@@ -40,8 +40,8 @@ Content.prototype.create = function(data, params, callback) {
 
 	newContent.save(function(err) {
 		if (err) { throw err; }
-  		console.log('Content added !');
-  		callback(null, newContent);
+        console.log('Content added !');
+        callback(null, newContent);
 	});
 }
  

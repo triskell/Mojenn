@@ -16,11 +16,11 @@ module.exports = function(app, passport) {
 	// Twitter authentification path
 	app .get('/auth/twitter', passport.authenticate('twitter'))
 		.get('/auth/twitter/callback', passport.authenticate('twitter', 
-		  { 
-		    successRedirect: '/',
-		    failureRedirect: '/login' 
-		  }))
-		};
+        { 
+            successRedirect: '/success',
+            failureRedirect: '/'
+        }));
+};
 
 function isAuthenticated(req,res,next){
 	if(req.isAuthenticated()){
@@ -29,4 +29,3 @@ function isAuthenticated(req,res,next){
 		next(new Error(401));
 	}
 }
-		

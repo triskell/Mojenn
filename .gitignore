@@ -4,6 +4,8 @@ node_modules/
 tmp
 .DS_Store
 .idea
+.zedstate
+tags
 
 #Do not want to share this
 config.js

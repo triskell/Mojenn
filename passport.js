@@ -39,6 +39,7 @@ module.exports = function(passport) {
                     newUser.twitter.token  = token;
                     newUser.twitter.username = profile.username;
                     newUser.twitter.displayName = profile.displayName;
+                    newUser.grade = 'user';
 
                     //save user in database
                     newUser.save(function(err) {
